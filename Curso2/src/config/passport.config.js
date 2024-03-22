@@ -16,7 +16,7 @@ const initializeStrategies = () => {
             try {
                 const { firstName, lastName, age } = req.body
 
-                if (!firstName || !email) return done(null, false, { message: "incomplete values" })
+                if (!email) return done(null, false, { message: "incomplete values" })
 
                 const exists = await userService.getBy({ email })
                 if (exists) return done(null, false, { message: 'User already exists' })

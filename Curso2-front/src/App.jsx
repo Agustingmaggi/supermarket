@@ -1,33 +1,22 @@
-import { useEffect, useState } from 'react'
-import './App.css'
-import UsersService from './services/UsersService'
+import React from "react";
+import "./App.css";
+import Body from './components/body/body.jsx'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import LoginForm from "./pages/IngresaPages/IngresaPage";
+import RegistrationForm from "./pages/RegistratePages/RegistratePage";
 
 function App() {
-  const [users, setUsers] = useState(null)
-
-  useEffect(() => {
-    const fetchUsers = async () => {
-      const usersService = new UsersService()
-      const { data } = await usersService.getUsers()
-      console.log(data[0])
-      setUsers(data[0])
-    }
-    !users && fetchUsers()
-  }, [users])
-
   return (
-    <>
-      hola!
-
-      {users && (
-        <div key={users._id}>
-          {users.firstName}
-        </div>
-      )}
-
-
-    </>
-  )
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Body />} />
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/register" element={<RegistrationForm />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
