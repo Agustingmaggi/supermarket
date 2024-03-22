@@ -7,6 +7,7 @@ import { cookieExtractor } from '../utils.js'
 import config from './config.js'
 import { Strategy as GoogleStrategy } from 'passport-google-oauth20'
 import { userService } from '../services/index.js'
+import { cartService } from '../services/index.js'
 
 const LocalStrategy = local.Strategy
 
@@ -34,7 +35,7 @@ const initializeStrategies = () => {
                 if (req.cookies['cart']) {
                     cart = req.cookies['cart']
                 } else {
-                    cartResult = await cartService.createCart
+                    let cartResult = await cartService.createCart
                     cart = cartResult._id
                 }
 

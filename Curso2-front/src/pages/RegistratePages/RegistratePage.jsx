@@ -23,6 +23,7 @@ const RegistrationForm = () => {
         };
 
         try {
+            console.log(formData)
             const response = await registerService.registerUser(formData);
 
             if (response.status === 200) {

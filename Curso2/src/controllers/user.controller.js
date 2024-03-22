@@ -7,12 +7,12 @@ import authService from '../services/auth.js'
 import CloudStorageService from "../services/CloudStorageService.js";
 
 const register = async (req, res) => {
-    try {
-        const mailService = new MailerService()
-        const result = await mailService.sendMail([req.user.email], DMailTemplates.WELCOME, { user: req.user })
-    } catch (error) {
-        console.log(`fallo envio de correo para ${req.user.email}`, error)
-    }
+    // try {
+    //     const mailService = new MailerService()
+    //     const result = await mailService.sendMail([req.user.email], DMailTemplates.WELCOME, { user: req.user })
+    // } catch (error) {
+    //     console.log(`fallo envio de correo para ${[req.user.email]}`, error)
+    // }
 
     res.clearCookie('cart')
     res.sendSuccess('Registered');

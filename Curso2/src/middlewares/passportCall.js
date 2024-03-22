@@ -10,7 +10,7 @@ const passportCall = (strategy, options = {}) => {
             if (!user) {
                 switch (options.strategyType) {
                     case 'LOCALS': {
-                        return res.status(401).send({ status: "error", error: info.message ? info.message : info.toString() })
+                        return res.status(401).send({ status: "error", error: "este error esta en passport call!!" })
                     }
                     case 'JWT': {
                         req.user = null;
