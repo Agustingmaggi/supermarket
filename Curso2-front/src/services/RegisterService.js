@@ -7,7 +7,7 @@ export default class AuthService {
 
     registerUser = (formData) => {
         const requestInfo = {
-            url: `https://supermarket-syyv.onrender.com/api/service/register`,
+            url: `https://supermarket-syyv.onrender.com/api/sessions/register`,
             data: formData
         }
         return this.client.makePostRequest(requestInfo)
