@@ -7,7 +7,7 @@ export default class UsersService {
 
     getUsers = () => {
         const requestInfo = {
-            url: `https://supermarket-syyv.onrender.com/`
+            url: `https://supermarket-syyv.onrender.com/users`
         }
         return this.client.makeGetRequest(requestInfo)
     }
