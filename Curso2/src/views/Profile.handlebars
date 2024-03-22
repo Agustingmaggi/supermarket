@@ -1,0 +1,44 @@
+Profile
+<Br>
+{{#if user}}
+{{user.name}}
+<Br>
+{{user.email}}<Br><Br>
+<a href="/api/sessions/logout"><button>Logout</button></a>
+<Br><Br>
+
+<form id="crearProd">
+    <label>title</label>
+    <input name="title"><br>
+    <label>price</label>
+    <input name="price"><br>
+    <label>stock</label>
+    <input name="stock"><br>
+    <input type="file" name="images"><br><br>
+    <br>
+
+    <button type="submit">Crear Producto</button>
+</form>
+<br><br>
+
+<form id="eliminarProd">
+    <label>pid</label>
+    <input name="pid"><br>
+    <br>
+    <button type="submit">Eliminar Producto</button>
+</form>
+<br><br>
+
+{{#each productos}}
+<p>Título: {{this.name}}</p>
+<p>Id: {{this._id}}</p>
+{{/each}}
+{{else}} No hay ningun usuario logeado!
+<a href="/login">Login</a>
+{{/if}}
+<style>
+    * {
+        background-color: darkslategrey;
+    }
+</style>
+<script src="/js/profile.js"></script>

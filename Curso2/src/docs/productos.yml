@@ -1,0 +1,54 @@
+paths:
+  /api/products:
+    get: 
+      summary: Devuelve los productos de la db
+      tags:
+        - Products
+      responses:
+        "200":
+          description: Los productos se encontraron satisfactoriamente
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status de la operacion
+                  payload:
+                    type: array
+                    items:
+                      $ref: "#components/schemas/Product"
+    post:
+      summary: Crea un producto nuevo
+      tags:
+        - Products
+  /api/products/:pid:
+    put:
+      summary: Actualiza un producto segun ID
+      tags: 
+        - Products
+    delete:
+      summary: Elimina el producto segun ID
+      tags:
+        - Products
+
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Id del producto
+        title:
+          type: string
+          description: Nombre del producto
+        categories:
+          type: string
+          description: A que categoria de productos pertenece
+        stock:
+          type: number
+          description: cantidad actual del stock disponible para la venta/compra
+
+        

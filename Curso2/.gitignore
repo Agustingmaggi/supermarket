@@ -1,0 +1,6 @@
+/node_modules
+package-lock.json
+.env.dev
+.env.prod
+/.vscode
+molten-optics-406215-5f669e81e6a4.json
