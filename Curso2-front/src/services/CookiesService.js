@@ -7,7 +7,7 @@ export default class CookiesService {
 
     getCookies = () => {
         const requestInfo = {
-            url: `http://localhost:8080`
+            url: `https://supermarket-syyv.onrender.com/`
         }
         return this.client.makeGetRequest(requestInfo)
     }

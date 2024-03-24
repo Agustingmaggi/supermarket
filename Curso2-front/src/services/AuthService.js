@@ -7,7 +7,7 @@ export default class AuthService {
 
     registerUser = (formData) => {
         const requestInfo = {
-            url: `http://localhost:8080/api/sessions/register`,
+            url: `https://supermarket-syyv.onrender.com/api/sessions/register`,
             body: formData,
             headers: {
                 'Content-Type': 'application/json'
@@ -18,7 +18,7 @@ export default class AuthService {
     }
     loginUser = (formData) => {
         const requestInfo = {
-            url: `http://localhost:8080/api/sessions/login`,
+            url: `https://supermarket-syyv.onrender.com/api/sessions/login`,
             body: formData,
             headers: {
                 'Content-Type': 'application/json'
