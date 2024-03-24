@@ -8,7 +8,7 @@ export default class CookiesService {
     getCookies = () => {
         const requestInfo = {
             url: `https://supermarket-syyv.onrender.com/`,
-            // { withCredentials: true }
+            withCredentials: true
         }
         return this.client.makeGetRequest(requestInfo)
     }
