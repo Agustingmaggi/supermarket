@@ -7,7 +7,7 @@ const cartSetter = async (req, res, next) => {
         const cart = await cartService.createCart();
         res.cookie('cart', cart._id.toString(), {
             // domain: 'https://supermarket-front.onrender.com/',
-            // sameSite: 'none',
+            sameSite: 'none',
             // secure: true
         })
     }
