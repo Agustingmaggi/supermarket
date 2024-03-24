@@ -4,7 +4,7 @@ import Body from './components/body/body.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import LoginForm from "./pages/LoginPages/LoginPage";
 import RegistrationForm from "./pages/RegistratePages/RegistratePage";
-import CookieComponent from "./pages/HomePages.jsx/HomePage.jsx";
+// import CookieComponent from "./pages/HomePages.jsx/HomePage.jsx";
 
 function App() {
   return (
