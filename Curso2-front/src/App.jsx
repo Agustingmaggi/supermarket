@@ -12,7 +12,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Body />}>
-            <Route index element={<CookieComponent />} />
+            {/* <Route index element={<CookieComponent />} /> */}
           </Route>
           <Route path="/login" element={<LoginForm />} />
           <Route path="/register" element={<RegistrationForm />} />
