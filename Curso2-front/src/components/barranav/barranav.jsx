@@ -13,6 +13,7 @@ const Navbar = () => {
             .then(response => {
                 // Actualiza el estado con las cookies obtenidas
                 setCookies(response.data.cookies);
+                console.log(response.data.cookies)
             })
             .catch(error => {
                 console.error('Error al obtener las cookies:', error);
