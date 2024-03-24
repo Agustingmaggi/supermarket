@@ -11,9 +11,15 @@ const Navbar = () => {
         // Llama al método para obtener las cookies al hacer clic en "Inicio"
         cookiesService.getCookies()
             .then(response => {
-                // Actualiza el estado con las cookies obtenidas
-                setCookies(response.data.cookies);
-                console.log(response.data.cookies)
+                // Verifica si la respuesta contiene las cookies
+                if (response.data && response.data.cookies) {
+                    // Actualiza el estado con las cookies obtenidas
+                    setCookies(response.data.cookies);
+                    // Muestra las cookies por consola
+                    console.log('Cookies:', response.data.cookies);
+                } else {
+                    console.error('La respuesta no contiene cookies:', response);
+                }
             })
             .catch(error => {
                 console.error('Error al obtener las cookies:', error);
