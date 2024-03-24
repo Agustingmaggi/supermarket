@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import RegisterService from '../../services/RegisterService';
+import AuthService from '../../services/AuthService';
 
 const RegistrationForm = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const registerService = new RegisterService();
+    const authService = new AuthService();
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
@@ -24,7 +24,7 @@ const RegistrationForm = () => {
 
         try {
             console.log(formData)
-            const response = await registerService.registerUser(formData);
+            const response = await authService.registerUser(formData);
 
             if (response.status === 200) {
                 // Procesar respuesta exitosa

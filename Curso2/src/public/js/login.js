@@ -3,6 +3,7 @@ const form = document.getElementById('loginForm')
 form.addEventListener('submit', async e => {
     e.preventDefault()
     const data = new FormData(form)
+    // console.log(data)
     const obj = {}
     data.forEach((value, key) => obj[key] = value)
     const response = await fetch('/api/sessions/login', {
@@ -13,9 +14,10 @@ form.addEventListener('submit', async e => {
         }
     })
     const result = await response.json()
+    // console.log(response)
     console.log(result)
     if (response.status === 200) {
-        window.location.replace('/')
+        // window.location.replace('/')
     }
 })
 

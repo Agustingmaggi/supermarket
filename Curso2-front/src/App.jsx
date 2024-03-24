@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Body from './components/body/body.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import LoginForm from "./pages/IngresaPages/IngresaPage";
+import LoginForm from "./pages/LoginPages/LoginPage";
 import RegistrationForm from "./pages/RegistratePages/RegistratePage";
 
 function App() {

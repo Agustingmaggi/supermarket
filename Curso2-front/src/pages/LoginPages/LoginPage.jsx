@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import AuthService from '../../services/AuthService';
 
 const LoginForm = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const authService = new AuthService();
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
@@ -12,12 +14,28 @@ const LoginForm = () => {
         setPassword(e.target.value);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Aquí puedes agregar tu lógica para enviar los datos del formulario al servidor
-        console.log('Email:', email);
-        console.log('Password:', password);
-        // ...
+
+        const formData = {
+            email,
+            password
+        };
+
+        try {
+            // console.log(formData)
+            const response = await authService.loginUser(formData);
+
+            if (response.status === 200) {
+                // Procesar respuesta exitosa
+                console.log('Login exitoso');
+            } else {
+                // Procesar respuesta de error
+                console.log('Error al Logearse');
+            }
+        } catch (error) {
+            console.log('Error de conexión', error);
+        }
     };
 
     return (

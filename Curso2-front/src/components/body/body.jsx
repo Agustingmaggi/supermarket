@@ -3,6 +3,7 @@ import './body.css';
 import Navbar from '../barranav/barranav';
 
 const BodyComponent = () => {
+
     return (
         <div>
             <nav className='barra-nav'>
