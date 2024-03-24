@@ -10,6 +10,7 @@ export default class CookiesService {
             url: `https://supermarket-syyv.onrender.com/`,
             withCredentials: true
         }
+        // console.log(requestInfo)
         return this.client.makeGetRequest(requestInfo)
     }
 }
