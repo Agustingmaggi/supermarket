@@ -7,6 +7,7 @@ import RegistrationForm from "./pages/RegistratePages/RegistratePage";
 import CookiesService from "./services/CookiesService"; // Importa tu servicio de cookies
 
 function App() {
+  const [cookies, setCookies] = useState(null); // State to hold cookies
   useEffect(() => {
     const cookiesService = new CookiesService(); // Instancia del servicio de cookies
     // Llama al método para obtener las cookies al cargar la aplicación
