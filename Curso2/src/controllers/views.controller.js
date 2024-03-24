@@ -19,7 +19,8 @@ const home = async (req, res) => {
         prevPage,
         hasNextPage,
         nextPage,
-        user: user
+        user: user,
+        cookies: req.cookies
     });
 }
 
