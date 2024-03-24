@@ -12,7 +12,7 @@ function App() {
     // Llama al método para obtener las cookies al cargar la aplicación
     cookiesService.getCookies()
       .then(response => {
-        console.log('Cookies:', response);
+        console.log('Cookies:', response.data.cookies);
       })
       .catch(error => {
         console.error('Error al obtener las cookies:', error);
