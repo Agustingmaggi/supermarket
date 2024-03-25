@@ -26,7 +26,7 @@ import config from './config/config.js'
 
 const app = express()
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://supermarket-front.onrender.com/',
     credentials: true
 }
 ))
