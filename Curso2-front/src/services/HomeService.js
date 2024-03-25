@@ -8,7 +8,7 @@ export default class HomeService {
     getHome = (data) => {
         const requestInfo = {
             url: `https://supermarket-syyv.onrender.com/`,
-            // withCredentials: true
+            withCredentials: true
         }
         return this.client.makeGetRequest(requestInfo)
     }
