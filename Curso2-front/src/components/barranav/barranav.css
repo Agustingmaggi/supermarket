@@ -1,6 +1,8 @@
 .navbar {
-    background-color: #333;
-    padding: 10px;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    width: 50%;
 }
 
 .navbar-nav {
@@ -18,7 +20,7 @@
     color: #fff;
     text-decoration: none;
     padding: 5px 10px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .nav-link:hover {

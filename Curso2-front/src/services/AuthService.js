@@ -20,6 +20,7 @@ export default class AuthService {
         const requestInfo = {
             url: `https://supermarket-syyv.onrender.com/api/sessions/login`,
             body: formData,
+            credentials: 'include',
             headers: {
                 'Content-Type': 'application/json'
             },

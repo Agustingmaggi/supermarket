@@ -12,7 +12,7 @@ const home = async (req, res) => {
     const { hasPrevPage, hasNextPage, prevPage, nextPage } = result
 
     const user = req.user
-    res.render("Home", {
+    res.send({
         productos: productos,
         page: currentPage,
         hasPrevPage,
