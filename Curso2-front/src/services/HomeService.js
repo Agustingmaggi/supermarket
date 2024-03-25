@@ -5,7 +5,7 @@ export default class HomeService {
         this.client = new AxiosClient()
     }
 
-    getHome = (data) => {
+    getHome = () => {
         const requestInfo = {
             url: `https://supermarket-syyv.onrender.com/`,
             withCredentials: true
