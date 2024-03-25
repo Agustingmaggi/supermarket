@@ -25,7 +25,10 @@ import passport from 'passport'
 import config from './config/config.js'
 
 const app = express()
-app.use(cors())
+app.use(cors({
+    origin: "https://supermarket-syyv.onrender.com/",
+    credentials: true
+}))
 
 
 const PORT = config.app.PORT

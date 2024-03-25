@@ -23,6 +23,7 @@ export default class AuthService {
             headers: {
                 'Content-Type': 'application/json'
             },
+            withCredentials: true
         }
         console.log(formData)
         return this.client.makePostRequest(requestInfo)

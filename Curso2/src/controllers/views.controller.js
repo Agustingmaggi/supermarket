@@ -20,7 +20,6 @@ const home = async (req, res) => {
         hasNextPage,
         nextPage,
         user: user,
-        // cookies: req.cookies
     });
 }
 
